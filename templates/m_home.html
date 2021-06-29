@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="content-section">
+    <div class="media">
+      <img src="{{url_for('static', filename='statistics.png')}}" align="left" />
+      <img src="{{url_for('static', filename='graphs.png')}}" align="middle" />
+      <img src="{{url_for('static', filename='search.png')}}" align="right" />
+    <div class="media-body">
+    </div>
+    </div>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <div class="form-group">
+            {{ form.option.label(class="form-control-label") }}
+
+            {% if form.option.errors %}
+              {{ form.option(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback" >
+                {% for error in form.option.errors %}
+                  <span>{{ error }} </span>
+                {% endfor %}
+              </div>
+              {% else %}
+                 {{ form.option(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+
+  </div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+

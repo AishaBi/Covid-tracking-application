@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<h2>Analytics page</h2>
+	<hr>
+	<br>
+	<div>
+		<p>Total Number of Employees: {{employees_total}}</p>
+		<p>Total % of employees with covid : {{case_percent}} </p>
+		<p>Total Number of Covid Cases: {{case_total}}</p>
+		<p>Employees working from home: {{home_total}}</p>
+		<p>Part-time in the office: {{office_total}}</p>
+		<p>Employees working from office:{{part_time_total}}</p>
+	</div>		
+
+
+
+{% endblock content %}

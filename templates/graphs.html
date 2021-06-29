@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="content-section">
+    <h2>Graphs</h2>
+    <hr>
+        <b>Bar Chart:</b>
+        <p> This option displays the total number of employees working from home, in office, part-time from office</p>
+        <b>Pie Chart:</b>
+        <p> This option shows the total amount of employees with and without covid in a more visual. Click and hover over each colour to see the values.</p>
+        <b>Line graph:</b>
+        <p> This option gives you a graph showing the total number of employee covid-cases over time</p>
+  </div>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <div class="form-group">
+            {{ form.option.label(class="form-control-label") }}
+
+            {% if form.option.errors %}
+              {{ form.option(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback" >
+                {% for error in form.option.errors %}
+                  <span>{{ error }} </span>
+                {% endfor %}
+              </div>
+              {% else %}
+                 {{ form.option(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+
+  </div>
+
+{% endblock content %}
