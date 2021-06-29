@@ -1,6 +1,8 @@
 # Python-application
 Python, Flask, SQLite
 
+Demonstration video: https://youtu.be/zqd-KQGCAUw
+
 I made an employee health and employment status tracking application.
 
 So the employee clicks whether they have covid or not, also if there are working from home, in office etc
